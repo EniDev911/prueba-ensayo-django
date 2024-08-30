@@ -2,7 +2,9 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login
 from .forms import RegisterForm
 
-# Create your views here.
+def home(request):
+    return render(request, 'home.html')
+
 def register(request):
     if request.method == "POST":
         form = RegisterForm(request.POST)
